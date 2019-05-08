@@ -6,25 +6,18 @@ import Result from "./components/Result";
 class App extends Component {
   constructor(){
     super();
-
     this.state = {
         result: ""
     }
 }
 
 onClick = button => {
-
   if(button === "="){
       this.calculate()
   }
-
-  else if(button === "C"){
+  else if(button === "CE"){
       this.reset()
   }
-  else if(button === "CE"){
-      this.backspace()
-  }
-
   else {
       this.setState({
           result: this.state.result + button
@@ -37,11 +30,11 @@ calculate = () => {
       this.setState({
           result: (eval(this.state.result) || "" ) + ""
       })
-  } catch (e) {
+  }
+  catch (e) {
       this.setState({
           result: "error"
       })
-
   }
 };
 
@@ -61,8 +54,8 @@ backspace = () => {
     return(
       <div className="App">
           <h1>Calculator</h1>
-          <Result result={this.state.result}/>
           <Keypad onClick={this.onClick}/>
+          <Result result={this.state.result}/>
       </div>
     );
   }
