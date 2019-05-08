@@ -35,7 +35,6 @@ onClick = button => {
 calculate = () => {
   try {
       this.setState({
-          // eslint-disable-next-line
           result: (eval(this.state.result) || "" ) + ""
       })
   } catch (e) {
@@ -61,11 +60,9 @@ backspace = () => {
   render(){
     return(
       <div className="App">
-        <div className="calculator-body">
-            <h1>Simple Calculator</h1>
-            <Result result={this.state.result}/>
-            <Keypad onClick={this.onClick}/>
-        </div>
+          <h1>Calculator</h1>
+          <Result result={this.state.result}/>
+          <Keypad onClick={this.onClick}/>
       </div>
     );
   }
