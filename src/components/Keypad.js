@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
+import "../styles/keypad.scss";
 
 export default class Keypad extends Component{
     render(){
         return(
             <section className="keypad">
-                <button name="CE" onClick={e => this.props.onClick(e.target.name)}>CE</button>
-                <button name="(" onClick={e => this.props.onClick(e.target.name)}>(</button>
-                <button name=")" onClick={e => this.props.onClick(e.target.name)}>)</button><br/>
+                {/* <button name="(" onClick={e => this.props.onClick(e.target.name)}>(</button>
+                <button name=")" onClick={e => this.props.onClick(e.target.name)}>)</button><br/> */}
                 <button name="1" onClick={e => this.props.onClick(e.target.name)}>1</button>
                 <button name="2" onClick={e => this.props.onClick(e.target.name)}>2</button>
                 <button name="3" onClick={e => this.props.onClick(e.target.name)}>3</button>
@@ -19,10 +19,11 @@ export default class Keypad extends Component{
                 <button name="8" onClick={e => this.props.onClick(e.target.name)}>8</button>
                 <button name="9" onClick={e => this.props.onClick(e.target.name)}>9</button>
                 <button name="*" onClick={e => this.props.onClick(e.target.name)}>x</button><br/>
+                <button name="CE" onClick={e => this.props.onClick(e.target.name)}>CE</button>
                 <button name="0" onClick={e => this.props.onClick(e.target.name)}>0</button>
                 <button name="." onClick={e => this.props.onClick(e.target.name)}>.</button>
                 <button name="/" onClick={e => this.props.onClick(e.target.name)}>/</button><br/>
-                <button name="=" onClick={e => this.props.onClick(e.target.name)}>ENTER</button>
+                <button className="enter" name="=" onClick={e => this.props.onClick(e.target.name)}>ENTER</button>
             </section>
         );
     }

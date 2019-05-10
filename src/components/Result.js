@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "../styles/result.scss";
 
 export default class Result extends Component{
 
